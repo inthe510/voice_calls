@@ -1,0 +1,97 @@
+/* General Styles */
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: 'Lato', sans-serif;
+}
+
+.instructions-container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-between;
+    
+}
+
+.pulsing-circle {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    animation: pulse 1.5s infinite;
+    position: absolute;
+    top: 36%;
+    left: 50%;
+    margin-top: -50px;
+    margin-left: -50px;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(0.95);
+        opacity: 0.7;
+    }
+    70% {
+        transform: scale(1.05);
+        opacity: 0.85;
+    }
+    100% {
+        transform: scale(0.95);
+        opacity: 0.7;
+    }
+}
+
+
+/* Instructions */
+#instructions {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+/* Chat Text */
+#userText, #botText {
+    display: none; /* Initially hidden */
+ 
+}
+
+/* Buttons */
+.row.justify-content-center {
+    margin-bottom: 25vh; /* Space at the bottom */
+}
+
+.btn {
+    padding: 10px 20px; /* Button padding */
+    margin-right: 20px; /* Space between buttons */
+    font-family: 'Lato', sans-serif; /* Corrected font-family declaration */
+    font-weight: 900 !important; /* Override Bootstrap's default font-weight */
+    color: #FFFF !important; /* Text color */
+    
+}
+/* Start Chat Button */
+#startButton.btn-success {
+    background-color: #056c05 !important; /* Light green color */
+    border-color: #90ee90 !important; /* Matching border */
+}
+
+#startButton.btn-success:disabled {
+    background-color: #6cff6c !important; /* Lighter green for disabled state */
+}
+
+/* End Chat Button */
+#stopButton.btn-danger {
+    background-color: #920b09 !important; /* Light red color */
+    border-color: #ffcccb !important; /* Matching border */
+}
+
+#stopButton.btn-danger:disabled {
+    background-color: #f78e8e !important; /* Lighter red for disabled state */
+}
+
+
+/* Responsive Design */
+@media (max-width: 576px) {
+    .btn {
+        width: 100%; /* Full width for small screens */
+        margin-right: 0;
+        margin-bottom: 10px; /* Space between stacked buttons */
+    }
+}

@@ -1,0 +1,93 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Gabby - Aging with Grace and Joy
+{% endblock %}
+
+{% block additionalstyles %}
+<link rel="stylesheet" href="{{ url_for('static', filename='styles-index.css') }}">
+{% endblock %}
+
+{% block content %}
+<div class="container-fluid">
+    
+ <!-- Main Header -->
+<div class="main-header-container">
+    <div class="centered-text-container">
+    <h1 class="display-4"><span class="first-line-bold">Experience aging with grace and joy</span></h1>
+    <br>
+    <h2 class="display-8"><span class="header-sub-1">Gabby is an AI-powered companion designed to support and accompany older adults on the journey to age independently, while reducing loneliness and isolation.</span></h2>
+    </div> <!--  End of centered-text-container */ -->
+</div>
+
+    
+    <!-- Registration Section -->
+    <div class="registration-container text-center">
+        <div class="centered-text-container">
+        <h4>Sign up to get access to the preview release.</h4>
+        
+        <form action="/collect_email" method="post" class="form-inline justify-content-center">
+            <div class="form-group mx-sm-3 mb-2">
+                <input type="email" class="form-control rounded-input" name="email" placeholder="Your Email Address" required>
+            </div>
+            <button type="submit" class="btn btn-primary rounded-btn mb-2">JoinNow</button>
+        </form>
+        
+        <h5>No matter how much (or how little) experience you have with technology, Gabby is simple and easy to use!</h5>
+        </div> <!-- End of centered-text-container -->
+    </div>
+
+    <!-- Image and Speech Bubble Container -->
+    <div class="image-speech-container">
+        <div class="graphic-container">
+        <img src="{{ url_for('static', filename='images/gabby-big.png') }}" class="img-fluid gabby-image" alt="Responsive image">
+        <div class="speech-bubble">
+            <div id="rotating-messages">
+                <p>Good morning!  How can I help you today?</p>
+                <p>Going for a walk is a great idea.  I'll set a reminder.</p>
+                <p>Time for lunch, don't forget your medicine.</p>
+            </div>
+        </div>
+        </div> <!-- End of graphic-container -->
+    </div>
+
+
+</div> <!-- End of container-fluid -->
+
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+$(document).ready(function() {
+    var messages = $('#rotating-messages p');
+    var current = 0;
+    
+    function rotateMessages() {
+        messages.eq(current).fadeOut(1500, function() {
+            current = (current + 1) % messages.length;
+            messages.eq(current).fadeIn(1500);
+        });
+    }
+    
+    // Start rotating messages every 3 seconds
+    setInterval(rotateMessages, 6000);
+    
+    // Show first message
+    messages.eq(0).show();
+
+    // Handle form submission
+    $('form').on('submit', function(e) {
+        e.preventDefault(); // Prevent the actual form submission
+
+        var formData = $(this).serialize(); // Serialize the form data for sending
+
+        $.post('/collect_email', formData, function(response) {
+            // Assuming '/collect_email' returns a success response
+            $('.registration-container').html('<h3>Thanks for your interest in Gabby, we will be in your inbox soon! :)</h3>'); // Replace the container content
+        });
+    });
+});
+</script>
+
+
+
+{% endblock %}

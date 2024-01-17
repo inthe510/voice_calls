@@ -1,0 +1,186 @@
+/* General Styles */
+
+
+body {
+    background-color: #FAFAFA;
+    font-family: 'Lato', sans-serif;
+}
+
+
+/* Navbar Styles */
+.navbar {
+    background-color: #ffffff;
+    font-family: 'MuseoModerno', sans-serif;
+}
+
+/* This ensures the navbar content aligns with your page content */
+.navbar .container-fluid {
+    max-width: 972px; /* Set your desired max-width */
+    margin: 0 auto; /* Center the container */
+}
+
+/* Keep the navbar from collapsing on mobile */
+.navbar-expand .navbar-collapse {
+    display: flex !important;
+    flex-basis: auto;
+}
+
+
+
+
+.navbar-brand {
+    color: #131111 !important; /* Assuming #FAFAFA (white) is the correct text color */
+    font-size: 30px;
+    font-weight: 800;
+    margin-left: 0px;
+   
+}
+
+.navbar-toggler {
+    border-color: rgba(255, 255, 255, 0.5) !important;
+}
+
+.navbar-toggler-icon {
+    display: hide !important;
+    /* This is correct as long as the navbar-toggler background is set */
+}
+
+.nav-link {
+    color: #FAFAFA !important; /* Make sure this is the color you want for your nav links */
+    margin-left: 15px;
+}
+
+/* Align navbar items to the right */
+.navbar-collapse {
+    justify-content: flex-end !important;
+}
+
+/* Button Styles */
+.btn {
+    font-family: 'Lato', sans-serif !important;
+    border-radius: 25px !important; /* Make buttons rounded */
+    background-color: #89ACE3 !important; /* Replace #someColor with the desired button color */
+    color: #89ACE3 !important; /* Replace #anotherColor with the desired button text color */
+}
+
+/* Add other custom styles or overwrite Bootstrap defaults here */
+
+/* Responsive adjustments if needed */
+@media (max-width: 992px) {
+    .navbar-collapse {
+        background-color:#FFFFFF !important; /* Keep the navbar background consistent on smaller screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar-toggler {
+        margin-left: auto !important;
+    }
+
+    footer {
+        /* Adjust the layout of footer elements to stack */
+        /* Example: if you're using flexbox or grid, you can change the direction */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        font-size: .5rem;
+        
+    }
+
+    footer a {
+        /* Change link colors to grey */
+        color: grey !important; /* Replace 'grey' with the specific shade of grey you prefer */
+    }
+}
+
+
+/* Make all buttons in the navbar rounded like the 'Sign In' button */
+.navbar .btn, .navbar .nav-link {
+    border-radius: 25px !important; /* Adjust as needed for desired roundness */
+    padding: 5px; /* Adjust padding to match the design */
+    padding-left: 20px !important;
+    padding-right: 20px!important;
+    margin-left: 33px !important;
+    margin-right: 33px !important;
+}
+
+/* Specifically target the 'Login' button if it's not a <button> but an <a> tag */
+.navbar .nav-link.login-button {
+    background-color: #89ACE3; /* Replace with actual color */
+    color: #070b12; /* Replace with actual text color */
+    border: 0px solid #020a0b; /* Replace with actual border color */
+    font-family: 'Lato', sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    margin-right: 0px !important;
+
+
+}
+
+footer {
+    background-color: #ffffff;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    font-family: 'Lato', sans-serif;
+    color: #000;
+}
+
+footer a {
+    /* Change link colors to grey */
+    color: grey !important; /* Replace 'grey' with the specific shade of grey you prefer */
+}
+
+.login-container {
+    width: 100%;
+    max-width: 400px; /* Adjust the form width as needed */
+    margin: auto;
+    padding: 2rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    background: #fff;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 33px;
+    margin-bottom: 300px;
+}
+
+
+
+.form-group {
+    margin-bottom: 1rem;
+    width: 100%; /* Ensure inputs and button width match */
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.form-group input[type="text"],
+.form-group input[type="password"] {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.form-group button {
+    width: 100%;
+    padding: 0.75rem;
+    background-color: #1dc5db; /* Adjust button color as per your site's theme */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.form-group button:hover {
+    background-color: #17a2b8; /* Slightly darker shade on hover */
+}
+

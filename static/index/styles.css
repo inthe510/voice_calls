@@ -1,0 +1,80 @@
+
+.container-fluid {
+    padding: 0px 0px;
+    margin: 0 auto;
+}
+
+/* Main Header styles */
+.main-header-container {
+    background-color: #465a9c; /* Soft Green */
+    padding: 10px 20px;
+    padding-left: 10%;
+    padding-right: 10%;
+    border-bottom: 0px solid #88C0A8; /* Complimentary Green */
+    color: white;
+    margin-bottom: 0;
+}
+
+.main-header-container h1,
+.main-header-container h2,
+.main-header-container p {
+    color: white;
+    padding: 20px 0; /* This will ensure that there's spacing around the text */
+}
+
+/* Registration Section styles */
+.registration-container {
+    background-color: #3b3466; /* Soft Peach */
+    padding: 0;
+    border-bottom: 2px solid #D7A9A6; /* Complimentary Peach */
+    color: white;
+    margin-bottom: 0;
+}
+
+.registration-container h3,
+.registration-container p {
+    color: white;
+    padding: 20px 0;
+}
+
+footer.footer-container {
+    background-color: #ffffff; 
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; 
+    align-items: center; 
+    padding: 20px 0;
+}
+
+/* For frameworks like Bootstrap, rows have negative margins. Using .no-gutters removes those */
+.row.no-gutters {
+    margin-right: 0;
+    margin-left: 0;
+}
+
+/* Removing padding from columns inside the adjusted rows */
+.row.no-gutters > [class^="col-"] {
+    padding: 0;
+}
+
+/* Ensuring no left or right margins for rows and containers */
+.row, .container {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.horizontal-form {
+    display: flex;
+    align-items: stretch;
+    gap: 10px;  /* spacing between elements */
+    white-space: nowrap;  /* prevent wrapping */
+    min-width: fit-content;
+    background-color: black;
+    border: 0px;
+}
+
+.horizontal-form input,
+.horizontal-form button {
+    margin: 0;  /* remove any default margin */
+}

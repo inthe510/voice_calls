@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block title %} Admin {% endblock %}
+
+{% block content %}
+
+<h1>Emails Collected:</h1>
+<ul>
+{% for email in emails %}
+    <li>{{ email.email }}</li>
+{% endfor %}
+</ul>
+    
+    {% endblock %}
+    ```

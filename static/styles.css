@@ -1,0 +1,537 @@
+/* Styles for the pulsing circle */
+.pulsing-circle {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    animation: pulse 1.5s infinite;
+    position: absolute;
+    top: 36%;
+    left: 50%;
+    margin-top: -50px;
+    margin-left: -50px;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(0.95);
+        opacity: 0.7;
+    }
+    70% {
+        transform: scale(1.05);
+        opacity: 0.85;
+    }
+    100% {
+        transform: scale(0.95);
+        opacity: 0.7;
+    }
+}
+
+
+
+/* Adjusted color scheme for a companion app for elders */
+:root {
+    --primary-color: #6B8DA5; /* Soft blue */
+    --accent-color: #E8BFAA;  /* Soft coral */
+    --background-color: #F4EDE6; /* Gentle beige */
+    --text-color: #4E4E4E;      /* Dark gray for good contrast and readability */
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: var(--background-color);
+    margin-left: 33px;
+    margin-bottom: 50px; 
+    color: var(--text-color);
+}
+
+.navbar {
+    background-color: var(--primary-color);
+}
+
+.navbar .nav-link,
+.navbar .navbar-brand {
+    color: var(--accent-color);
+}
+
+.navbar .nav-link:hover,
+.navbar .navbar-brand:hover {
+    color: var(--background-color) !important;
+}
+
+.card {
+    border-color: var(--primary-color);
+}
+
+.card-header {
+    background-color: var(--primary-color);
+    color: var(--background-color);
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+    background-color: var(--accent-color);
+    border-color: var(--accent-color);
+}
+
+footer {
+    background-color: var(--primary-color);
+    color: var(--background-color);
+}
+
+footer a {
+    color: var(--accent-color);
+}
+
+footer a:hover {
+    color: var(--background-color);
+}
+
+/* ... [the rest of the styles remain unchanged] ... */
+
+
+.spacious {
+    margin: 20px 0;
+}
+
+.sleek {
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
+}
+
+@media screen and (max-width: 992px) {
+    body {
+        margin-left: 10px;
+    }
+
+    footer {
+        width: calc(100% - 10px);
+    }
+}
+
+.btn {
+    margin: 10px;
+}
+
+.btn {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    color: #fff;
+}
+
+.btn:hover,
+.btn:focus {
+    background-color: var(--accent-color);
+    border-color: var(--accent-color);
+}
+
+table, 
+ul, 
+ol {
+    word-wrap: break-word;
+}
+
+th,
+td {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+thead {
+    background-color: var(--primary-color);
+    color: #fff;
+}
+
+.nav-item.ml-auto:not(:last-child) {
+    margin-right: auto;
+}
+
+.navbar-nav {
+    display: flex;
+    align-items: center;
+}
+:root {
+    --primary-color: #0059FF;
+    --accent-color: #FFA600;
+    --feature-box-bg: #DDEEF7;  /* Light blue shade */
+    --cta-box-bg: #B0D0E6;     /* Slightly deeper blue shade */
+    --cta-details-bg: #18324d; /* Light grey shade */
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #F4F6F8;
+    margin-left: 33px;
+    margin-bottom: 50px; 
+}
+
+/* ... [the rest of the styles remain unchanged] ... */
+
+.feature-box {
+    background-color: var(--feature-box-bg);
+    border-radius: 15px;
+    box-shadow: 3px 3px 5px 0px rgba(0,0,0,0.1);
+    padding: 20px;
+    margin: 10px 0;
+}
+
+.cta-box {
+    background-color: var(--cta-box-bg);
+    border-radius: 15px;
+    padding: 20px;
+    margin: 10px 0;
+}
+
+.cta-details-box {
+    background-color: var(--cta-details-bg);
+    border-radius: 15px;
+    padding: 20px;
+    margin: 10px 0;
+}
+
+.cta-details-box h3, 
+.cta-details-box p {
+    color: white;
+    font-weight: lighter;
+}
+
+
+@media screen and (max-width: 992px) {
+    body {
+        margin-left: 10px;
+    }
+
+    footer {
+        width: calc(100% - 10px);
+    }
+}
+.row {
+    margin-bottom: 18px;
+}
+.spaced-row {
+    margin-bottom: 18px;
+    
+}
+.spaced-columns > div:not(:last-child) {
+    margin-right: 18px;
+}
+.distribute-columns {
+    justify-content: space-between;
+}
+
+.row.distribute-evenly > div {
+    margin-right: auto;
+    margin-left: auto;
+}
+
+#detailedInfoSection {
+    background-image: url('/static/images/background-image.png'); /* Replace with your image path */
+    background-size: cover; /* Cover the entire div */
+    background-position: center; /* Center the image */
+    padding: 50px 0; /* Add some padding for better appearance */
+}
+/* ... [Existing styles up to the end of your file] ... */
+
+/* Adjustments for the chatbot layout */
+.container.chatbot-container {
+    max-width: 600px;  /* Adjust this to your preferred width */
+    margin: 50px auto; /* Centers the container */
+    border: 1px solid #ccc; /* Optional: add a border for visualization */
+    padding: 20px; /* Add some padding */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Optional: add some shadow */
+}
+
+.user-message, .assistant-message {
+    display: block;
+    padding: 8px;
+    margin: 8px 0;
+    border-radius: 5px;
+}
+
+.user-message {
+    background-color: #e6f7ff;
+    border: 1px solid #b3daff;
+}
+
+.assistant-message {
+    background-color: #f2e6ff;
+    border: 1px solid #d1b3ff;
+}
+
+#message-form {
+    display: flex;
+    justify-content: space-between; /* Distributes child elements evenly */
+    margin-top: 20px;
+}
+
+#message-form input[type="text"] {
+    flex: 1; /* Take available space */
+    margin-right: 0px; /* Some margin to the right */
+}
+
+
+.input-section {
+    margin-bottom: 10px; /* Spacing between the input and the buttons */
+}
+
+.button-section {
+    display: flex;
+    justify-content: space-between; /* This will distribute the two buttons evenly */
+    flex-wrap: wrap; /* Allows wrapping if there's not enough space */
+}
+
+.button-section .btn {
+    flex: 1; /* Makes the buttons take equal space */
+    margin: 5px; /* Adds some space around the buttons */
+}
+
+
+.chatbot-container .input-group {
+    margin-bottom: 15px;
+}
+
+.chatbot-container .btn {
+    width: 48%; /* This will take into account a tiny gap for breathing room between the two buttons */
+}
+
+.chatbot-container .form-control {
+    width: 100%; /* Makes sure the input takes the full width of its parent */
+    margin-bottom: 15px; /* Creates a gap between the input and the button container */
+}
+
+.button-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px; /* Provides spacing between the buttons */
+}
+
+.chatbot-container .btn {
+    flex: 1; /* This makes sure the buttons take equal widths */
+}
+
+/* User input container styles */
+.user-input-container {
+    max-width: 800px;  /* Match the width of chatbot-container */
+    margin: 0px auto; /* Centers the container */
+    border: 0px solid #ccc; /* Matching border style */
+    padding: 0px; /* Add some padding */
+    box-shadow: 0 0px 0px rgba(0, 0, 0, 0.1); /* Matching shadow */
+    display: flex; /* To align the input and buttons in one line */
+    align-items: center; /* Center align vertically */
+}
+
+.user-input-container form {
+    width: 100%;
+    display: flex; /* To make it flex container so the children can grow/shrink accordingly */
+}
+
+.user-input-container .form-control {
+    flex-grow: 1; /* Allow the input to grow and occupy the available space */
+    padding: 9px; /* Match padding */
+    margin: 0; /* To ensure no unwanted margin */
+    border: 0px solid #b3daff; /* Border to match user-message */
+    border-radius: 5px; /* Match border-radius */
+    background-color: #e6f7ff; /* Background to match user-message */
+    font-size: 16px; /* Adjust font-size as needed */
+    outline: none;
+    font-family: inherit;
+    color: #333;
+}
+
+.user-input-container .form-control:focus {
+    border-color: #e6f7ff;
+    box-shadow: 0 0 0px rgba(102, 175, 233, 0.6);
+}
+
+.user-input-container form {
+    background-color: #fff;
+    max-width: 800px;
+    margin: 1px auto;
+    padding: 1px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+    background-color: #FAFAFA;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    text-align: center;
+}
+
+.small-spinner-container {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: 0%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.spinner-position {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(0deg);
+    animation: spinner-rotate 1s infinite linear;
+}
+
+@keyframes spinner-rotate {
+    0% { transform: translate(-50%, -50%) rotate(0deg); }
+    100% { transform: translate(-50%, -50%) rotate(360deg); }
+}
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+form {
+    background-color: #fff;
+    max-width: 360px;
+    margin: 10px auto;
+    padding: 33px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+form h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+form div {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    color: #555;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+    outline: none;
+}
+
+input[type="submit"] {
+    background-color: #007BFF;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+}
+
+input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+ul {
+    color: rgba(9, 2, 2, 0.986);
+    padding-left: 0;
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color: #007BFF;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+.container .lead + ul li {
+    color: #000; /* Black color */
+    font-size: 1.2rem; /* 20% bigger than the default */
+}
+
+.instructions-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 25vh; /* Set to full viewport height */
+    transition: opacity 0.5s ease-out;  /* Add a transition effect */
+}
+
+#instructions {
+    background-color: #f7f7f7;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 90%; /* Allow a bit more width by default */
+    margin: 20px auto; /* Give some spacing on top and bottom */
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 1;
+}
+
+#instructions p,
+#instructions ul {
+    margin-bottom: 15px;
+}
+
+#instructions li {
+    margin-bottom: 5px;
+}
+
+#instructions {
+    transition: opacity 1.1s; /* This will give it a smooth half-second fade */
+}
+
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+    #instructions {
+        max-width: 600px;
+    }
+}
+
+/* Small devices (landscape phones, less than 768px) */
+@media (max-width: 767.98px) {
+    #instructions {
+        max-width: 100%;
+        padding: 10px; /* Reduce padding a bit for smaller screens */
+    }
+}
+.hidden {
+    opacity: 0;
+    pointer-events: none;  /* Ensure the element doesn't receive clicks */
+    
+}
+
+
